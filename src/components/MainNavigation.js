@@ -9,6 +9,8 @@ class MainNavigation extends Component {
         <p className={css.item}> Code Samples </p>
         <Link className={css.item} to="/home">Home</Link>
         <Link className={css.item} to="/api-middleware">API Middleware</Link>
+        <Link className={css.item} to="/users">Users</Link>
+        <Link className={css.item} to="/sign-up">Sign Up</Link>
       </div>
     );
   }

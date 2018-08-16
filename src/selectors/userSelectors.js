@@ -1,4 +1,6 @@
-export const getUsers = state => state.users.results;
+import collection from 'lodash/collection';
+
+export const getUsers = state => collection.map(state.users.results);
 
 export const getUser = (state, userId) => state.users.results[userId];
 

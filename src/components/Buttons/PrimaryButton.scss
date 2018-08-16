@@ -4,6 +4,8 @@
   padding: 18px 24px;
   border-radius: 3px;
   border: none;
+  margin-bottom: 1em;
+  padding: 1em;
   outline: none;
   background: $brand-blue;
   color: $brand-white;
@@ -14,4 +16,8 @@
 
 .blue {
   background: $gradient2;
+}
+
+.red {
+  background: $brand-red;
 }

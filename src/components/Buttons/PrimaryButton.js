@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import css from './PrimaryButton.scss';
 
 const PrimaryButton = ({ text, onClick, disabled, color }) => {
-  const btnColor = color === 'blue' ? css.blue : '';
+  const btnColor = color === 'blue' ? css.blue : css.red;
 
   return (
     <button className={`${css.btn} ${btnColor}`} disabled={disabled} onClick={onClick}>
