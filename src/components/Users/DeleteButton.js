@@ -39,7 +39,7 @@ class DeleteButton extends Component {
           ariaHideApp={false}
           isOpen={this.state.showModal}
         >
-          <h1>Permanently Delete This User?</h1>
+          <h1>Are You Sure You Want To Delete This User?</h1>
           <PrimaryButton
             text="Yes"
             onClick={this.handleDeleteUser}
