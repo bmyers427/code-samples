@@ -34,7 +34,13 @@ class UpdateUserForm extends Component {
           component={FormField}
           validate={required}
         />
-
+        <Field
+          name="username"
+          label="Username"
+          type="text"
+          component={FormField}
+          validate={required}
+        />
         <Field
           name="email"
           label="Email"

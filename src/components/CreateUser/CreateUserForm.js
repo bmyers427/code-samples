@@ -22,9 +22,18 @@ class CreateUserForm extends Component {
           component={FormField}
           validate={required}
         />
+
         <Field
           name="last_name"
           label="Last Name"
+          type="text"
+          component={FormField}
+          validate={required}
+        />
+
+        <Field
+          name="username"
+          label="Username"
           type="text"
           component={FormField}
           validate={required}

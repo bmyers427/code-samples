@@ -14,6 +14,7 @@ class UserInfo extends Component {
       <div>
         <div className={css.userRow}>First Name: {user.first_name}</div>
         <div className={css.userRow}>Last Name: {user.last_name}</div>
+        <div className={css.userRow}>User Name: {user.username}</div>
         <div className={css.userRow}>Email: {user.email}</div>
         <Link to={`/users/${user.id}/edit`} className={css.userRow}>Edit</Link>
         <DeleteContainer />
