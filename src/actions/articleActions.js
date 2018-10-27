@@ -4,7 +4,7 @@ export const createArticle = (userId, articleData) => dispatch => (
   dispatch({
     type: 'callAPI',
     request_type: CREATE_ARTICLE,
-    endpoint: 'api/users/${userId}/articles',
+    endpoint: `api/users/${userId}/articles`,
     method: 'POST',
     body: {
       article: articleData

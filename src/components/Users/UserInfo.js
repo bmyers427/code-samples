@@ -18,9 +18,11 @@ class UserInfo extends Component {
         <div className={css.userRow}>Email: {user.email}</div>
         <Link to={`/users/${user.id}/edit`} className={css.userRow}>Edit</Link>
         <DeleteContainer />
+        <h1>Articles</h1>
+        <Link to={`/users/${user.id}/new-article`} className={css.userRow}>New Article</Link>
       </div>
     );
-  }
+  }ownProps
 
   render () {
     return (
