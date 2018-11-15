@@ -5,6 +5,7 @@
   border-radius: 3px;
   border: none;
   margin-bottom: 1em;
+  margin-right: 1em;
   padding: 1em;
   outline: none;
   background: $brand-blue;
@@ -15,7 +16,7 @@
 }
 
 .blue {
-  background: $gradient2;
+  background: $brand-blue;
 }
 
 .red {
