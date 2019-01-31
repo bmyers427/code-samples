@@ -1,0 +1,11 @@
+.articles {
+
+  .article-row {
+    display: inline-block;
+    width:  100%;
+    background-color: $color1;
+    margin-bottom: 1em;
+    padding: 1em;
+    color: $brand-white;
+  }
+}

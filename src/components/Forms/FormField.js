@@ -7,11 +7,12 @@ class FormField extends Component {
     label: PropTypes.string.isRequired,
     placeholder: PropTypes.string,
     input: PropTypes.object.isRequired,
-    meta: PropTypes.object.isRequired
+    meta: PropTypes.object.isRequired,
+    height: PropTypes.string
   };
 
   render() {
-    const { input, label, meta: { touched, error } } = this.props;
+    const { input, label, height, meta: { touched, error } } = this.props;
     const hasError = touched && error;
     const labelClass = hasError ? `${css.label} ${css.errorLabel}` : css.label;
 
@@ -22,7 +23,7 @@ class FormField extends Component {
           {hasError && <strong><span className={css.fieldError}>{error}</span></strong>}
         </label>
 
-        <input {...input} className={`${css.input} ${hasError ? css.errorInput : ''}`}
+        <input {...input} className={`${css.input} ${hasError ? css.errorInput : ''}`} style={{height: height}}
         />
       </div>
     );

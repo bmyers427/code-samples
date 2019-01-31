@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import css from './Users.scss';
 import DeleteContainer from './DeleteContainer';
+import ArticlesContainer from '../Articles/ArticlesContainer';
+
 
 class UserInfo extends Component {
 
@@ -19,10 +21,11 @@ class UserInfo extends Component {
         <Link to={`/users/${user.id}/edit`} className={css.userRow}>Edit</Link>
         <DeleteContainer />
         <h1>Articles</h1>
+        <ArticlesContainer/>
         <Link to={`/users/${user.id}/new-article`} className={css.userRow}>New Article</Link>
       </div>
     );
-  }ownProps
+  }
 
   render () {
     return (

@@ -34,6 +34,7 @@ class CreateArticleForm extends Component {
           type="text"
           component={FormField}
           validate={required}
+          height="10em"
         />
 
         {errorMessage && <FormNotification error={errorMessage} />}
