@@ -9,6 +9,7 @@ import CreateUserPage from './CreateUser/CreateUserPage';
 import CreateUserSuccessPage from './CreateUser/CreateUserSuccessPage';
 import UserInfoPage from './Users/UserInfoPage';
 import CreateArticlePage from './Articles/CreateArticlePage';
+import EditArticlePage from './Articles/EditArticlePage';
 
 class Main extends Component {
   render () {
@@ -23,6 +24,7 @@ class Main extends Component {
           <Route exact path='/sign-up' component={CreateUserPage}/>
           <Route exact path='/sign-up/:userId/success' component={CreateUserSuccessPage}/>
           <Route exact path='/users/:userId/new-article' component={CreateArticlePage}/>
+          <Route exact path='/users/:userId/article/:articleId' component={EditArticlePage}/>
         </Switch>
       </div>
     );

@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Field, propTypes as reduxFormPropTypes } from 'redux-form';
 import SaveButton from '../Buttons/SaveButton';
 import FormField from '../Forms/FormField';
+import TextArea from '../Forms/TextArea';
 import FormNotification from '../Notifications/FormNotification';
 import { required } from '../../validators';
 import css from '../Login/LoginForm.scss';
 
-class CreateArticleForm extends Component {
+class ArticleForm extends Component {
   render () {
     // Redux form props
     const { error, articleError, submitting, submitFailed, handleSubmit } = this.props;
@@ -32,7 +33,7 @@ class CreateArticleForm extends Component {
           name="body"
           label="Body"
           type="text"
-          component={FormField}
+          component={TextArea}
           validate={required}
           height="10em"
         />
@@ -45,8 +46,8 @@ class CreateArticleForm extends Component {
   }
 }
 
-CreateArticleForm.propTypes = {
+ArticleForm.propTypes = {
   ...reduxFormPropTypes
 };
 
-export default CreateArticleForm;
+export default ArticleForm;

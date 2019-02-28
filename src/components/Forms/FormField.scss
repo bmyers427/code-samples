@@ -2,11 +2,6 @@
   display: inline-block;
   width: 100%;
 
-  .input, {
-    display: inline-block;
-    width: 100%;
-  }
-
   .label, .field-error {
     display: flex;
     justify-content: space-between;
@@ -25,7 +20,9 @@
     color: $brand-red;
   }
 
-  .input {
+  .input, .textarea {
+    display: inline-block;
+    width: 100%;
     margin-bottom: 15px;
     padding: 10px;
     outline: none;
