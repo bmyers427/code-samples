@@ -19,7 +19,13 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onSubmit: values => {
-      dispatch(createArticle(ownProps.match.params.userId, values))
+      // copies values into new hash and adds user_id
+      const userData = {
+        ...values,
+        user_id: ownProps.match.params.userId
+      };
+
+      dispatch(createArticle(ownProps.match.params.userId, userData))
       .then(user => ownProps.history.push(`/sign-up/${user.id}/success`));
     }
 

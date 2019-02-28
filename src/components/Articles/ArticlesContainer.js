@@ -18,15 +18,15 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    retrieveArticles: (user) => dispatch(retrieveArticles(user.id)),
+    retrieveArticles: () => dispatch(retrieveArticles(ownProps.match.params.userId)),
   };
 };
 
 const ArticlesContainer = compose(
   withRouter,
-  connect(mapStateToProps, mapDispatchToProps ),
+  connect(mapStateToProps, mapDispatchToProps),
 )(Articles);
 
 export default ArticlesContainer;

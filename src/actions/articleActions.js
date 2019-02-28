@@ -41,8 +41,10 @@ export const deleteArticle = (userId, articleId) => dispatch => (
 // can also have a body, query and method (if not provided, defaults to a GET request)
 export const RETRIEVE_ARTICLES = 'RETRIEVE_ARTICLES';
 
-export const retrieveArticles = (userId) => ({
+export const retrieveArticles = (userId) => dispatch => (
+  dispatch({
   type: 'callAPI',
   request_type: RETRIEVE_ARTICLES,
   endpoint: `api/users/${userId}/articles`
-});
+  })
+);

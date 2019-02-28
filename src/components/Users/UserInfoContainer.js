@@ -16,8 +16,9 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
+  const userId = ownProps.match.params.userId;
   return {
-    deleteUser: () => dispatch(deleteUser(ownProps.match.params.userId))
+    deleteUser: () => dispatch(deleteUser(userId))
     .then(() => {
       ownProps.history.push('/users');
     })
